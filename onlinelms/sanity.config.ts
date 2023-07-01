@@ -16,7 +16,7 @@ export default defineConfig({
   projectId,
   dataset,
   // Add and edit the content schema in the './sanity/schema' folder
-  schema,
+  
   plugins: [
     deskTool(),
     // Vision is a tool that lets you query your content with GROQ in the studio
@@ -24,4 +24,5 @@ export default defineConfig({
     visionTool({defaultApiVersion: apiVersion}),
     muxInput({mp4_support: 'standard'}),
   ],
+  schema,
 })

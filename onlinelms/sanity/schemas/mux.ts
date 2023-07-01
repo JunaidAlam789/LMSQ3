@@ -2,7 +2,7 @@
 import {muxInput} from 'sanity-plugin-mux-input'
 
 
-
+/* 
 export const mux = {
   name: 'videos',
   type: 'object',
@@ -16,4 +16,4 @@ export const mux = {
     },
   ],
 }
-
+ */

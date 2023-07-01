@@ -1,19 +1,12 @@
 import { type SchemaTypeDefinition } from 'sanity'
 
-import {category} from "./schemas/category"
-import {product} from "./schemas/product"
+//import {category} from "./schemas/category"
+//import {product} from "./schemas/product"
 //import {mux} from "./schemas/mux"
 //import {muxVideo} from "./schemas/muxVideo"
 //import { muxVideoAsset } from './schemas/muxVideoAsset'
 // This is from schema.ts
-
-
-
-
- 
-
-
-
+//import {muxInput} from 'sanity-plugin-mux-input'
 
  export const muxVideo = {
   name: 'mux.video',
@@ -30,7 +23,7 @@ import {product} from "./schemas/product"
   ],
 } 
 
-  export const muxVideoAsset = {
+ export const muxVideoAsset = {
   name: 'mux.videoAsset',
   type: 'object',
   title: 'Video asset',
@@ -56,11 +49,28 @@ import {product} from "./schemas/product"
       name: 'thumbTime',
     },
   ],
-} 
+}
+ 
 
-export const trailer={
+
+  export const trailer={
       title: 'Trailer',
       name: 'trailer',
+      type: 'document',
+     
+      fields: [
+        {title: 'Title', name: 'title', type: 'string'},
+        {
+          title: 'Video',
+          name: 'video',
+          type: 'mux.video',
+        },
+        
+      ],
+    }  
+    /* export const catVideos={
+      title: 'catVideos',
+      name: 'catVideos',
       type: 'document',
       fields: [
         {title: 'Title', name: 'title', type: 'string'},
@@ -71,10 +81,12 @@ export const trailer={
         },
       ],
     }
+ */
+    
   
 
  
  export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [product,category,trailer],
+  types: [trailer]
 }
- 
+  

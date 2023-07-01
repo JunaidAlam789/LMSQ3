@@ -1,4 +1,5 @@
 import MuxVideo from '@/components/MuxVideo'
+import VideoPlayer from '@/components/VideoPlayer'
 import Image from 'next/image'
 
 export default function Home() {
@@ -38,7 +39,8 @@ export default function Home() {
 
      
     <MuxVideo/>
-
+    <VideoPlayer/>
+    
         
     </main>
   )
