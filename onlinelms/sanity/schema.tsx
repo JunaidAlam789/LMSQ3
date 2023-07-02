@@ -68,25 +68,27 @@ import { type SchemaTypeDefinition } from 'sanity'
         
       ],
     }  
-    /* export const catVideos={
-      title: 'catVideos',
-      name: 'catVideos',
+    export const videofile={
+      title: 'Video File',
+      name: 'videofile',
       type: 'document',
+     
       fields: [
         {title: 'Title', name: 'title', type: 'string'},
         {
           title: 'Video',
           name: 'video',
-          type: 'mux.video',
+          type: 'file',
         },
+        
       ],
-    }
- */
+    }  
+   
     
   
 
  
  export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [trailer]
+  types: [trailer, videofile]
 }
   
