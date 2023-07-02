@@ -15,7 +15,8 @@ export default function VideoPlayer(){
 
 <div>
 <h2>Sanity file type Schema</h2>
-<ReactPlayer url='https://cdn.sanity.io/files/2fxx4d6o/lectures/40eac18c9411459966b6bea20d86eec2e785e35e.mp4' />
+<ReactPlayer url='https://cdn.sanity.io/files/2fxx4d6o/lectures/40eac18c9411459966b6bea20d86eec2e785e35e.mp4' controls={true} />
+
 </div>
 
 </>
