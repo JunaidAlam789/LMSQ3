@@ -1,4 +1,4 @@
-const cloudVideo = {
+/* const cloudVideo = {
     name: 'cloudvideo',
     type: 'cloudinary.asset',
     title: 'Video asset reference',
@@ -12,7 +12,7 @@ const cloudVideo = {
       },
     ],
   } 
-
+ */
   export const cloudtrailer={
     title: 'CloudTrailer',
     name: 'cloudtrailer',

@@ -1,4 +1,7 @@
 import { type SchemaTypeDefinition } from 'sanity'
+import { video } from './schemas/video'
+import {course} from './schemas/course'
+import { category } from './schemas/category'
 
 //import {category} from "./schemas/category"
 //import {product} from "./schemas/product"
@@ -8,7 +11,7 @@ import { type SchemaTypeDefinition } from 'sanity'
 // This is from schema.ts
 //import {muxInput} from 'sanity-plugin-mux-input'
 
- export const muxVideo = {
+/*  export const muxVideo = {
   name: 'mux.video',
   type: 'object',
   title: 'Video asset reference',
@@ -21,9 +24,9 @@ import { type SchemaTypeDefinition } from 'sanity'
       to: [{type: 'mux.videoAsset'}],
     },
   ],
-} 
+}  */
 
- export const muxVideoAsset = {
+/*  export const muxVideoAsset = {
   name: 'mux.videoAsset',
   type: 'object',
   title: 'Video asset',
@@ -49,7 +52,7 @@ import { type SchemaTypeDefinition } from 'sanity'
       name: 'thumbTime',
     },
   ],
-}
+} */
  
 
 
@@ -113,11 +116,90 @@ import { type SchemaTypeDefinition } from 'sanity'
         
       ],
     }  
+
+   /*  export const category= {
+      name: "category",
+      type: "document",
+      title: "Course Category",
+      fields: [{
+             name: "name",
+             type: "string",
+             title: "Course Category"
+          }]
+      
+      
+      } */
+    
+
+    /* export const course= {
+      name: 'course',
+      type: 'document',
+        title: 'Course',
+      fields: [
+        {
+          name: 'course_id',
+          type: 'string',
+          title: 'Course_id'
+        },
+        {
+          name: 'title',
+          type: 'string',
+          title: 'Title'
+        },
+        {
+          name: 'description',
+          type: 'string',
+          title: 'Description'
+        },
+                
+        {
+          name: "category",
+          type: "reference",
+          to: [{type: "category"}],
+        }
+      ]
+    } */
+   /*  export const video= {
+      name: 'video',
+      type: 'document',
+        title: 'Video',
+      fields: [
+        {
+          name: 'video_id',
+          type: 'string',
+          title: 'Video_id'
+        },
+        {
+          name: 'title',
+          type: 'string',
+          title: 'Title'
+        },
+        {
+          name: 'description',
+          type: 'string',
+          title: 'Description'
+        },
+        {
+          name: 'video',
+          type: 'cloudinary.asset',
+          title: 'Video',
+        },
+        
+        {
+          name: "course",
+          type: "reference",
+          to: [{type: "course"}],
+        }
+      ]
+    } */
+
+   
     
   
 
  
  export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [trailer, videofile,cloudtrailer]
+ /*  types: [trailer, videofile,cloudtrailer,category,course,video] */
+  types: [category,course,video]
 }
   

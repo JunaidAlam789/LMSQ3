@@ -5,11 +5,12 @@
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
+import {muxInput} from 'sanity-plugin-mux-input'
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schema'
-import {muxInput} from '../onlinelms/sanity'
+//import {muxInput} from '../onlinelms/sanity'
 import {cloudinaryAssetSourcePlugin} from 'sanity-plugin-cloudinary'
 import {cloudinarySchemaPlugin} from 'sanity-plugin-cloudinary'
 
@@ -26,6 +27,7 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
     muxInput({mp4_support: 'standard'}),
+    //muxInput(),
     cloudinaryAssetSourcePlugin(),
     cloudinarySchemaPlugin(),
   ],

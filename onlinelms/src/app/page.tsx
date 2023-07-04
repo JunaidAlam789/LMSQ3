@@ -39,8 +39,8 @@ export default function Home() {
       </div>
 
      
-    <MuxVideo/>
-    <VideoPlayer/>
+  {/*   <MuxVideo/>
+    <VideoPlayer/> */}
     <CloudinaryVideo/>
     
         

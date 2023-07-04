@@ -9,9 +9,10 @@ const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 export  default async function CloudinaryVideo(){
 
   //`*[_type == "product" && title match "women*"]
-  let data=await client.fetch(`*[_type == "cloudtrailer"]{
+  let data=await client.fetch(`*[_type == "video"]{
     title,
     video{url},
+    course->{category ->{name}, title}
   }`)
 console.log(data[0])
 return(<>
@@ -20,9 +21,12 @@ return(<>
  <div className="flex flex-wrap justify-center gap-4 ">{data.map((product:any,key: any)=>(
       <div key={key} className="flex flex-col justify-center items-center">
       <h3 className="text-lg font-bold uppercase " >{product.title}</h3>
+      <h3 className="text-lg font-bold uppercase " >Category: {product.course.category.name}</h3>
+      <h3 className="text-lg font-bold uppercase " >Course: {product.course.title}</h3>
       {/* <h3 className="text-lg font-bold uppercase " >{product.video.asset.playbackId}</h3> */}
       
-      <ReactPlayer url={product.video.url} controls={true} />
+      <ReactPlayer url={product.video.url}
+       controls={true} />
        </div>
       ))}</div>
 
