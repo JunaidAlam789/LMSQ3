@@ -11,7 +11,7 @@ import { category } from './schemas/category'
 // This is from schema.ts
 //import {muxInput} from 'sanity-plugin-mux-input'
 
-/*  export const muxVideo = {
+  export const muxVideo = {
   name: 'mux.video',
   type: 'object',
   title: 'Video asset reference',
@@ -24,9 +24,9 @@ import { category } from './schemas/category'
       to: [{type: 'mux.videoAsset'}],
     },
   ],
-}  */
+}  
 
-/*  export const muxVideoAsset = {
+  export const muxVideoAsset = {
   name: 'mux.videoAsset',
   type: 'object',
   title: 'Video asset',
@@ -52,7 +52,7 @@ import { category } from './schemas/category'
       name: 'thumbTime',
     },
   ],
-} */
+} 
  
 
 
