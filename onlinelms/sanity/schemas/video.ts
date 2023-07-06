@@ -1,29 +1,35 @@
-// schemas/pet.js
-export const video= {
-    name: 'video',
-    type: 'document',
-      title: 'Video',
+const cloudVideo = {
+    name: 'cloudvideo',
+    type: 'cloudinary.asset',
+    title: 'Video asset reference',
     fields: [
       {
-        name: 'title',
-        type: 'string',
-        title: 'Title'
+        title: 'CloudinarlyVideo',
+        name: 'asset',
+        type: 'object',
+       
+        
       },
+    ],
+  } 
+
+  export const video={
+    title: 'Video',
+    name: 'video',
+    type: 'document',
+   
+    fields: [
+      {title: 'Title', name: 'title', type: 'string'},
       {
-        name: 'description',
-        type: 'string',
-        title: 'Description'
-      },
-      {
-        name: 'video',
-        type: 'cloudinary.asset',
         title: 'Video',
+        name: 'video',
+        type: 'file',
+      },
+      {
+        title: 'TimeStamp',
+        name: 'timeStamp',
+        type: 'datetime',
       },
       
-      {
-        name: "course",
-        type: "reference",
-        to: [{type: "course"}],
-      }
-    ]
-  }
+    ],
+  }  

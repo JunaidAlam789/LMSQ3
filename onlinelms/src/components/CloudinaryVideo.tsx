@@ -12,7 +12,7 @@ export  default async function CloudinaryVideo(){
   let data=await client.fetch(`*[_type == "video"]{
     title,
     video{url},
-    course->{category ->{name}, title}
+    course->{category ->{title}, title}
   }`)
 console.log(data[0])
 return(<>

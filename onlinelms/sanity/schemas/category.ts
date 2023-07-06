@@ -6,7 +6,14 @@ fields: [{
        name: "name",
        type: "string",
        title: "Course Category"
-    }]
+    },
+    {
+        name: "title",
+        type: "string",
+        title: "Course Category"
+     }
+
+]
 
 
 }
