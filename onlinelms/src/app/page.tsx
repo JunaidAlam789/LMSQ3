@@ -1,5 +1,6 @@
-import CloudinaryVideo from '@/components/CloudinaryVideo'
+//import CloudinaryVideo from '@/components/CloudinaryVideo'
 import MuxVideo from '@/components/MuxVideo'
+import FileVideo from '@/components/FileVideo'
 import VideoPlayer from '@/components/VideoPlayer'
 import Image from 'next/image'
 
@@ -40,9 +41,13 @@ export default function Home() {
 
      
   {/*   <MuxVideo/>
-    <VideoPlayer/> */}
+    <VideoPlayer/> 
     <CloudinaryVideo/>
-    
+     
+
+    */}
+   <FileVideo/>
+    <h1>Hellloooooo</h1>
         
     </main>
   )

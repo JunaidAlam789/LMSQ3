@@ -26,10 +26,39 @@ const cloudVideo = {
         type: 'file',
       },
       {
+        title: 'Thumbnail',
+        name: 'thumbnail',
+        type: 'image',
+      },
+      {
         title: 'TimeStamp',
         name: 'timeStamp',
-        type: 'datetime',
-      },
+       type: 'array',
+        of: [{type: 'document',
+        fields: [
+          {title: 'Title', name: 'title', type: 'string'},
+          {
+            title: 'minute',
+            name: 'minute',
+            type: 'number',
+          },
+        ],
+      
+      }],
+      
+      }, 
+      {title: 'Index',
+      name: 'index',
+      type: 'number',
+      validation: (Rule: any) => Rule.required(),
+    },
+
+
+      {
+        name: "course",
+        type: "reference",
+        to: [{type: "course"}],
+      }
       
     ],
   }  

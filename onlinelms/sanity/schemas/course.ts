@@ -29,16 +29,22 @@ export const course= {
             name: 'title',
             type: 'string',
             title: 'Title',
-            description: ''
+            description: '',
     
           },
           {
             name: 'description',
             type: 'string',
             title: 'Description',
-            description: ''
+            description: '',
     
-          }
+          },
+          {
+            name: 'image',
+            type: 'image',
+            title: 'Card Image',
+               
+          },
 
         ]
 
@@ -62,7 +68,13 @@ export const course= {
             title: 'Description',
             description: ''
     
-          }
+          },
+          {
+            name: 'image',
+            type: 'image',
+            title: 'Card Image',
+               
+          },
 
         ]
 
@@ -87,7 +99,13 @@ export const course= {
             title: 'Description',
             description: ''
     
-          }
+          },
+          {
+            name: 'image',
+            type: 'image',
+            title: 'Card Image',
+               
+          },
 
         ]
 
@@ -111,23 +129,57 @@ export const course= {
             title: 'Description',
             description: ''
     
-          }
+          },
+          {
+            name: 'image',
+            type: 'image',
+            title: 'Card Image',
+               
+          },
 
         ]
 
       },
       {
         name: 'isCompletePath',
+        type: 'document',
+        title: 'isCompletePath',
+        description: 'Further Study Path',
+        fields:[
+      
+      {
+        name: 'isCompletePath',
         type: 'boolean',
         title: 'isCompletePath',
-        description: 'Further Study'
+        description: 'Further Study Path',
+        
+      },
+
+
+      {
+        name: 'image',
+        type: 'image',
+        title: 'Study Path Image',
+        description: 'Further Study Path Image',
+        hidden: ({parent}) =>!parent?.isCompletePath,
+       
+
+           
+      },
+    ],
+    },
+      {
+        name: 'introVideo',
+        type: 'file',
+        title: 'introVideo',
+        description: ''
 
       },
       {
-        name: 'introVideo',
-        type: 'video',
-        title: 'introVideo',
-        description: ''
+        name: 'videosCount',
+        type: 'number',
+        title: 'videosCount',
+        description: 'Count should be updated manually if new video is added'
 
       },
 
