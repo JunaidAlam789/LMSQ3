@@ -161,7 +161,7 @@ export const course= {
         type: 'image',
         title: 'Study Path Image',
         description: 'Further Study Path Image',
-        hidden: ({parent}) =>!parent?.isCompletePath,
+        hidden: ({parent}:{parent: any}) =>!parent?.isCompletePath,
        
 
            
